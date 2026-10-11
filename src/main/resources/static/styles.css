@@ -1,0 +1,119 @@
+:root {
+  color-scheme: light dark;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f1419;
+  color: #e7ecf3;
+}
+
+.layout {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.panel, .chat {
+  background: #1b232d;
+  border: 1px solid #2c3947;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+input, button {
+  font: inherit;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #3a4a5c;
+  background: #11181f;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
+
+.hint, .status, .typing {
+  color: #9aa8b8;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #fca5a5;
+}
+
+.chat-header, .chat-body, #send-form {
+  display: flex;
+  gap: 1rem;
+}
+
+.chat-header {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.chat-body aside {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.thread {
+  flex: 1;
+  min-width: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+#messages {
+  min-height: 280px;
+  max-height: 420px;
+  overflow: auto;
+  border: 1px solid #2c3947;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+#messages li {
+  margin-bottom: 0.6rem;
+}
+
+#messages .meta {
+  color: #9aa8b8;
+  font-size: 0.8rem;
+}
+
+#rooms button {
+  width: 100%;
+  margin-bottom: 0.4rem;
+  background: #243041;
+  border-color: #243041;
+}
+
+#rooms button.active {
+  background: #3b82f6;
+}
+
+#send-form {
+  margin-top: 0.75rem;
+}
+
+#send-form input {
+  flex: 1;
+}

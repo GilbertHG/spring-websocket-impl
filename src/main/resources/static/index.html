@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team chat</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="panel" id="login-panel">
+      <h1>Team chat</h1>
+      <p class="hint">Demo users: alice, bob, carol — password: password</p>
+      <form id="login-form">
+        <label>
+          Username
+          <input id="username" name="username" value="alice" required>
+        </label>
+        <label>
+          Password
+          <input id="password" name="password" type="password" value="password" required>
+        </label>
+        <button type="submit">Sign in</button>
+        <p id="login-error" class="error" hidden></p>
+      </form>
+    </section>
+
+    <section class="chat" id="chat-panel" hidden>
+      <header class="chat-header">
+        <div>
+          <strong id="whoami"></strong>
+          <span class="status" id="conn-status">disconnected</span>
+        </div>
+        <button type="button" id="logout">Sign out</button>
+      </header>
+      <div class="chat-body">
+        <aside>
+          <h2>Rooms</h2>
+          <ul id="rooms"></ul>
+          <h2>In room</h2>
+          <ul id="presence"></ul>
+        </aside>
+        <div class="thread">
+          <ol id="messages"></ol>
+          <p id="typing" class="typing"></p>
+          <form id="send-form">
+            <input id="message" autocomplete="off" maxlength="2000" placeholder="Message" required>
+            <button type="submit">Send</button>
+          </form>
+          <p id="chat-error" class="error" hidden></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.1.1/bundles/stomp.umd.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
